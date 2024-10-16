@@ -1,4 +1,4 @@
-# MERN-stack-starter
+# Full Stack Project Architecture Starter
 
 ## Frontend Structure
 
@@ -69,3 +69,31 @@
 -The server project is meant to have a structure similar to a  micro-service style of architecture where every feature/unit is stored and as an individual folder and related models, controllers are stored in the same folder
 
 -but just like the problems posed in the frontend structure some extra folders where added for shared logic and services that are used in the entire project and also a core folder is added for general configurations needed for the project to work
+
+-in summary the folders and files for the server are:
+
+1. app folder - for holding microservice/features
+2. common folder - for holding files that are shared across the project
+3. core folder - for holding core logic and configuration needed for the project to run
+4. lib folder - holding custom packages created for the project
+5. .env file - holding secret keys that are not pushed to github
+6. main.js - our main file for starting our server
+7. package.json - keeping track of our packages
+
+|-app
+| |-micro-1
+| |-mico-2
+| |-etc...
+|-common
+| |-middlewares
+| |-services.js
+| |-etc...
+|-core
+| |-config
+| |-core.routing.js
+| |-core.error-handler.js
+| |-etc...
+|-lib
+|-.env
+|-main.js
+|-package.json
