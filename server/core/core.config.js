@@ -16,12 +16,14 @@ export function runAppConfig(){
         app.use(middleware)
     })
 
+    // default middleware setup
     app.use(express.static("public"))
     app.use(express.json())
 
     //setup routes from registered routes from the core.routing.js
     app.use(appRouter)
 
+    //custom function for starting the server with a customo Logger
     app.startServer = ()=>{
         app.listen(PORT || 5501,()=>{
             AppLogger.logDebug("init", `Server Started and runinng at http://localhost:${PORT || 5501}/`);
